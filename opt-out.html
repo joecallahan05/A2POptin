@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ECS SMS Opt‑Out</title>
+  <title>Thank You – ECS SMS Opt‑In</title>
   <style>
     :root {
       --primary-blue: #005a9c;
@@ -11,11 +11,16 @@
       --text-color: #333333;
       --font-sans: "Segoe UI", Roboto, sans-serif;
     }
-    body {
+    *, *::before, *::after {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+    body {
       font-family: var(--font-sans);
       background: var(--light-gray);
       color: var(--text-color);
+      line-height: 1.5;
     }
     header {
       background: var(--primary-blue);
@@ -24,116 +29,83 @@
       text-align: center;
     }
     header h1 {
-      margin: 0;
       font-size: 1.75rem;
       font-weight: normal;
     }
     main {
-      max-width: 480px;
+      max-width: 600px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
-    form {
+    .card {
       background: var(--card-bg);
       padding: 2rem;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
     }
-    .field {
-      margin-bottom: 1.25rem;
+    .card h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: var(--primary-blue);
     }
-    .field label {
-      display: block;
-      font-weight: bold;
-      margin-bottom: 0.5rem;
-    }
-    .field input[type="tel"] {
-      width: 100%;
-      padding: 0.6rem;
-      font-size: 1rem;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    .optout {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
+    .card p {
       margin-bottom: 1.5rem;
-    }
-    .optout input {
-      width: 1.2rem;
-      height: 1.2rem;
-    }
-    button[type="submit"] {
-      background: var(--primary-blue);
-      color: white;
-      padding: 0.75rem 1.5rem;
       font-size: 1rem;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
     }
-    button[type="submit"]:disabled {
-      background: #888;
-      cursor: not-allowed;
+    .card a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    .footer a {
+      color: var(--primary-blue);
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>ECS SMS Opt‑Out</h1>
+    <h1>ECS SMS Opt‑In</h1>
   </header>
 
   <main>
-    <form action="/ecs-services/unsubscribe" method="post">
-      <!-- Phone number -->
-      <div class="field">
-        <label for="phone">Phone Number</label>
-        <input
-          type="tel"
-          id="phone"
-          name="phone"
-          required
-          placeholder="e.g. 918‑555‑1234"
-          pattern="\d{3}[ ‑]?\d{3}[ ‑]?\d{4}"
-        >
-      </div>
+    <div class="card">
+      <h2>Thank You for Opting In!</h2>
+      <p>
+        You will now receive informational SMS updates from Chickasaw Nation Enhanced Citizen Services.
+      </p>
+      <p>
+        Need to change your preferences?
+        <a href="https://joecallahan05.github.io/ChickasawECS/opt-out.html">
+          Click here to opt out
+        </a>
+      </p>
+    </div>
 
-      <!-- Opt‑out checkbox -->
-      <div class="optout">
-        <input type="checkbox" id="optout" name="optout" required>
-        <label for="optout">Unsubscribe me from all ECS SMS communications</label>
-      </div>
-
-      <button type="submit" id="submitBtn" disabled>Submit</button>
-    </form>
-      <div class="footer">
+    <!-- Updated footer -->
+    <div class="footer">
       <p>
         <a href="https://www.chickasaw.net" target="_blank">the Chickasaw Nation Tribal Government</a><br>
         520 E. Arlington<br>
-        Ada OK 74820
+        Ada OK 74820
       </p>
       <p>
         <a href="https://joecallahan05.github.io/ChickasawECS/PrivacyPolicy.html" target="_blank">Privacy Policy</a>
-        <span class="pipe">|</span>
       </p>
     </div>
   </main>
 
-  <script>
-    const phone = document.getElementById('phone');
-    const optout = document.getElementById('optout');
-    const submit = document.getElementById('submitBtn');
-
-    function updateButton() {
-      // enable only when phone has content and checkbox is checked
-      const hasPhone = phone.value.trim().length > 0;
-      submit.disabled = !(hasPhone && optout.checked);
-    }
-
-    phone.addEventListener('input', updateButton);
-    optout.addEventListener('change', updateButton);
-  </script>
 </body>
 </html>
