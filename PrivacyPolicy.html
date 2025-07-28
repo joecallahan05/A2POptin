@@ -11,7 +11,11 @@
       --text-color: #333333;
       --font-sans: "Segoe UI", Roboto, sans-serif;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: var(--font-sans);
       background: var(--light-gray);
@@ -59,6 +63,17 @@
     a:hover {
       text-decoration: underline;
     }
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    .footer a {
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
   </style>
 </head>
 <body>
@@ -93,7 +108,7 @@
       </ul>
 
       <h2>4. Opt‑Out &amp; Help</h2>
-      <p>You can unsubscribe from all ECS SMS messages at any time by replying <strong>STOP</strong> to any message. To receive more information, reply <strong>HELP</strong> or contact us at <a href="tel:918-555-1234">(580)757‑9082</a>.</p>
+      <p>You can unsubscribe from all ECS SMS messages at any time by replying <strong>STOP</strong> to any message. To receive more information, reply <strong>HELP</strong> or contact us at <a href="tel:580-757-9082">(580) 757‑9082</a>.</p>
 
       <h2>5. Data Retention &amp; Security</h2>
       <p>We retain your phone number, consent timestamp, and messaging history for as long as necessary to provide services and comply with legal obligations. We employ industry‑standard safeguards to protect your data.</p>
@@ -115,16 +130,16 @@
       Attn: Privacy Office<br>
       520 E. Arlington, Ada, OK 74820<br>
       Email: <a href="mailto:notify@chickasaw.net">notify@chickasaw.net</a><br>
-      Phone: <a href="tel:580-757‑9082">(580)757‑9082</a></p>
-
+      Phone: <a href="tel:580-757-9082">(580) 757‑9082</a></p>
     </div>
+
     <div class="footer">
       <p>
         <a href="https://www.chickasaw.net" target="_blank">the Chickasaw Nation Tribal Government</a><br>
-        520 E. Arlington<br>
-        Ada OK 74820
+        520 E. Arlington<br>
+        Ada OK 74820
       </p>
-      </div>
+    </div>
   </main>
 
 </body>
