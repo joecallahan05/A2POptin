@@ -13,6 +13,9 @@
       --font-sans: "Segoe UI", Roboto, sans-serif;
     }
 
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
     body {
       margin: 0;
       font-family: var(--font-sans);
@@ -43,6 +46,12 @@
       padding: 2rem;
       border-radius: 6px;
       box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .intro-text {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.5;
     }
 
     label.phone-label {
@@ -79,7 +88,6 @@
     .service-card:hover {
       box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     }
-
     .service-card input {
       flex-shrink: 0;
     }
@@ -97,6 +105,23 @@
       background: #888;
       cursor: not-allowed;
     }
+
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    .footer a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .footer .pipe {
+      margin: 0 0.5rem;
+      color: #999;
+    }
   </style>
 </head>
 <body>
@@ -107,7 +132,14 @@
 
   <main>
     <form id="optInForm"
-          onsubmit="event.preventDefault(); window.location.href='https://joecallahan05.github.io/A2POptin/ThankYouOpt-in.html';">
+          onsubmit="event.preventDefault(); window.location.href='https://joecallahan05.github.io/ChickasawECS/ThankYouOpt-in.html';">
+
+      <!-- Introductory text -->
+      <p class="intro-text">
+        By opting in below, you agree to receive informational SMS messages for the services you select.
+        Messages include form submission confirmations, appointment reminders, and status updates.
+        All messages are strictly informational and support access to tribal services and programs.
+      </p>
 
       <!-- Phone number -->
       <label class="phone-label" for="phone">
@@ -124,7 +156,7 @@
 
       <!-- Services grid -->
       <div class="services-grid">
-        <!-- Page 1 -->
+        <!-- Page 1 -->
         <label class="service-card"><input type="checkbox" name="services" value="Pathways To Success"><span>Pathways To Success</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Special Education Program"><span>Special Education Program</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Youth Wrestling Clinic"><span>Youth Wrestling Clinic</span></label>
@@ -136,7 +168,7 @@
         <label class="service-card"><input type="checkbox" name="services" value="Adult Learning Program"><span>Adult Learning Program</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="After School Arts Program"><span>After School Arts Program</span></label>
 
-        <!-- Page 2 -->
+        <!-- Page 2 -->
         <label class="service-card"><input type="checkbox" name="services" value="ARTesian Gallery & Studios"><span>ARTesian Gallery & Studios</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Artist Directory"><span>Artist Directory</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Assisted Living Benefit Program"><span>Assisted Living Benefit Program</span></label>
@@ -148,19 +180,19 @@
         <label class="service-card"><input type="checkbox" name="services" value="Behavioral Health Services"><span>Behavioral Health Services</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Burial Assistance Program"><span>Burial Assistance Program</span></label>
 
-        <!-- Page 3 -->
+        <!-- Page 3 -->
         <label class="service-card"><input type="checkbox" name="services" value="Butterfly Art Contest"><span>Butterfly Art Contest</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Camp Survivor"><span>Camp Survivor</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Car Seat Safety Program"><span>Car Seat Safety Program</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Cardiology"><span>Cardiology</span></label>
-        <label class="service-card"><input type="checkbox" name="services" value="Career and Technical Education Assistance Program"><span>Career & Technical Education Assistance Program</span></label>
+        <label class="service-card"><input type="checkbox" name="services" value="Career & Technical Education Assistance Program"><span>Career & Technical Education Assistance Program</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Career Development Services"><span>Career Development Services</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Career Services"><span>Career Services</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Cemetery Preservation Program"><span>Cemetery Preservation Program</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Champions Football Clinic"><span>Champions Football Clinic</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Cheer Clinic"><span>Cheer Clinic</span></label>
 
-        <!-- Page 4 -->
+        <!-- Page 4 -->
         <label class="service-card"><input type="checkbox" name="services" value="Chickasaw Alumni Association"><span>Chickasaw Alumni Association</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Chickasaw Annual Meeting & Festival"><span>Chickasaw Annual Meeting & Festival</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Chickasaw Archaeological Survey Program (CASPR)"><span>Chickasaw Archaeological Survey Program (CASPR)</span></label>
@@ -172,7 +204,7 @@
         <label class="service-card"><input type="checkbox" name="services" value="Chickasaw Council House Museum"><span>Chickasaw Council House Museum</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Chickasaw Cultural Enrichment Family Camp"><span>Chickasaw Cultural Enrichment Family Camp</span></label>
 
-        <!-- Page 5 -->
+        <!-- Page 5 -->
         <label class="service-card"><input type="checkbox" name="services" value="Chipota Chikashshanompoli (Children Speaking Chickasaw Language) Club"><span>Chipota Chikashshanompoli (Children Speaking Chickasaw Language) Club</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Diabetes Care Center"><span>Diabetes Care Center</span></label>
         <label class="service-card"><input type="checkbox" name="services" value="Chickasaw Elder Employment Program"><span>Chickasaw Elder Employment Program</span></label>
@@ -189,6 +221,19 @@
 
       <button type="submit" id="submitBtn" disabled>Submit</button>
     </form>
+
+    <div class="footer">
+      <p>
+        <a href="https://www.chickasaw.net" target="_blank">the Chickasaw Nation Tribal Government</a><br>
+        520 E. Arlington<br>
+        Ada OK 74820
+      </p>
+      <p>
+        <a href="https://joecallahan05.github.io/ChickasawECS/PrivacyPolicy.html" target="_blank">Privacy Policy</a>
+        <span class="pipe">|</span>
+        <a href="https://joecallahan05.github.io/ChickasawECS/opt-out.html" target="_blank">Unsubscribe</a>
+      </p>
+    </div>
   </main>
 
   <script>
