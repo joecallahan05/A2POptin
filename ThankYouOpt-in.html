@@ -11,7 +11,11 @@
       --text-color: #333333;
       --font-sans: "Segoe UI", Roboto, sans-serif;
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: var(--font-sans);
       background: var(--light-gray);
@@ -43,6 +47,7 @@
     .card h2 {
       font-size: 2rem;
       margin-bottom: 1rem;
+      color: var(--primary-blue);
     }
     .card p {
       margin-bottom: 1.5rem;
@@ -55,6 +60,22 @@
     }
     .card a:hover {
       text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 2rem;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    .footer a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .footer .pipe {
+      margin: 0 0.5rem;
+      color: #999;
     }
   </style>
 </head>
@@ -71,12 +92,14 @@
         You will now receive informational SMS updates from Chickasaw Nation Enhanced Citizen Services.
       </p>
       <p>
-        Need to change your preferences?  
+        Need to change your preferences?
         <a href="https://joecallahan05.github.io/ChickasawECS/opt-out.html">
           Click here to opt out
         </a>
       </p>
     </div>
+
+    <!-- Updated footer -->
     <div class="footer">
       <p>
         <a href="https://www.chickasaw.net" target="_blank">the Chickasaw Nation Tribal Government</a><br>
