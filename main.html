@@ -106,7 +106,8 @@
   </header>
 
   <main>
-    <form action="/ecs-services/submit" method="post">
+    <!-- onsubmit prevents default and redirects -->
+    <form id="optinForm" onsubmit="event.preventDefault(); window.location.href='https://joecallahan05.github.io/A2POptin/ThankYouOpt-in.html';">
 
       <!-- Phone number -->
       <label class="phone-label" for="phone">
@@ -164,7 +165,6 @@
           <input type="checkbox" name="services" value="After School Arts Program">
           <span>After School Arts Program</span>
         </label>
-
         <!-- Page 2 -->
         <label class="service-card">
           <input type="checkbox" name="services" value="ARTesian Gallery & Studios">
@@ -206,7 +206,6 @@
           <input type="checkbox" name="services" value="Burial Assistance Program">
           <span>Burial Assistance Program</span>
         </label>
-
         <!-- Page 3 -->
         <label class="service-card">
           <input type="checkbox" name="services" value="Butterfly Art Contest">
@@ -248,7 +247,6 @@
           <input type="checkbox" name="services" value="Cheer Clinic">
           <span>Cheer Clinic</span>
         </label>
-
         <!-- Page 4 -->
         <label class="service-card">
           <input type="checkbox" name="services" value="Chickasaw Alumni Association">
@@ -290,7 +288,6 @@
           <input type="checkbox" name="services" value="Chickasaw Cultural Enrichment Family Camp">
           <span>Chickasaw Cultural Enrichment Family Camp</span>
         </label>
-
         <!-- Page 5 -->
         <label class="service-card">
           <input type="checkbox" name="services" value="Chipota Chikashshanompoli (Children Speaking Chickasaw Language) Club">
@@ -329,30 +326,5 @@
           <span>Chickasaw Honor Guard</span>
         </label>
         <label class="service-card">
-          <input type="checkbox" name="services" value="Chickasaw Humanities Courses">
-          <span>Chickasaw Humanities Courses</span>
-        </label>
-        <label class="service-card">
-          <input type="checkbox" name="services" value="Chickasaw Landscaping Products – Chickasaw Farms">
-          <span>Chickasaw Landscaping Products – Chickasaw Farms</span>
-        </label>
-        <label class="service-card">
-          <input type="checkbox" name="services" value="Chickasaw Language Flashcards">
-          <span>Chickasaw Language Flashcards</span>
-        </label>
-      </div>
-
-      <button type="submit" id="submitBtn" disabled>Submit</button>
-    </form>
-  </main>
-
-  <script>
-    const phoneInput = document.getElementById('phone');
-    const submitBtn = document.getElementById('submitBtn');
-
-   phoneInput.addEventListener('input', () => {
-  submitBtn.disabled = phoneInput.value.trim() === '';
-});
-  </script>
-</body>
-</html>
+          <input type="checkbox" name="services" value="Chickasaw
+::contentReference[oaicite:0]{index=0}
