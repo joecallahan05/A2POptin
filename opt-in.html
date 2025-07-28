@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ECS SMS Opt‑In</title>
+  <style>
+    /* ======== Vars ======== */
+    :root {
+      --primary-blue: #005a9c;
+      --light-gray: #f5f5f5;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --font-sans: "Segoe UI", Roboto, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      font-family: var(--font-sans);
+      background: var(--light-gray);
+      color: var(--text-color);
+    }
+
+    header {
+      background: var(--primary-blue);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.75rem;
+      font-weight: normal;
+    }
+
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    form {
+      background: white;
+      padding: 2rem;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    label.phone-label {
+      display: block;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
+    label.phone-label input {
+      width: 100%;
+      padding: 0.6rem;
+      font-size: 1rem;
+      margin-top: 0.4rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .service-card {
+      background: var(--card-bg);
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: box-shadow 0.2s;
+    }
+    .service-card:hover {
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    .service-card input {
+      flex-shrink: 0;
+    }
+
+    button[type="submit"] {
+      background: var(--primary-blue);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button[type="submit"]:disabled {
+      background: #888;
+      cursor: not-allowed;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Enhanced Citizen Services SMS Opt‑In</h1>
+  </header>
+
+  <main>
+    <form action="/ecs-services/submit" method="post">
+
+      <!-- Phone number -->
+      <label class="phone-label" for="phone">
+        Phone Number  
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="e.g. 918‑555‑1234"
+          pattern="\d{3}[ ‑]?\d{3}[ ‑]?\d{4}"
+        >
+      </label>
+
+      <!-- Services grid -->
+      <div class="services-grid">
+        <!-- Page 1 -->
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Pathways To Success">
+          <span>Pathways To Success</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Special Education Program">
+          <span>Special Education Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Youth Wrestling Clinic">
+          <span>Youth Wrestling Clinic</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="“37” Rental Program">
+          <span>“37” Rental Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="“98” Rental Program">
+          <span>“98” Rental Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="72 Hour Photography Competition">
+          <span>72 Hour Photography Competition</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Aalhakoffichi' (A Place for Healing)">
+          <span>Aalhakoffichi' (A Place for Healing)</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Acute Care">
+          <span>Acute Care</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Adult Learning Program">
+          <span>Adult Learning Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="After School Arts Program">
+          <span>After School Arts Program</span>
+        </label>
+
+        <!-- Page 2 -->
+        <label class="service-card">
+          <input type="checkbox" name="services" value="ARTesian Gallery & Studios">
+          <span>ARTesian Gallery & Studios</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Artist Directory">
+          <span>Artist Directory</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Assisted Living Benefit Program">
+          <span>Assisted Living Benefit Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Audiology">
+          <span>Audiology</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="AYA – Your Fitness Journey">
+          <span>AYA – Your Fitness Journey</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Baseball Clinic">
+          <span>Baseball Clinic</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Batterer Intervention Services">
+          <span>Batterer Intervention Services</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Behavioral Health Psychiatry">
+          <span>Behavioral Health Psychiatry</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Behavioral Health Services">
+          <span>Behavioral Health Services</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Burial Assistance Program">
+          <span>Burial Assistance Program</span>
+        </label>
+
+        <!-- Page 3 -->
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Butterfly Art Contest">
+          <span>Butterfly Art Contest</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Camp Survivor">
+          <span>Camp Survivor</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Car Seat Safety Program">
+          <span>Car Seat Safety Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Cardiology">
+          <span>Cardiology</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Career and Technical Education Assistance Program">
+          <span>Career & Technical Education Assistance Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Career Development Services">
+          <span>Career Development Services</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Career Services">
+          <span>Career Services</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Cemetery Preservation Program">
+          <span>Cemetery Preservation Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Champions Football Clinic">
+          <span>Champions Football Clinic</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Cheer Clinic">
+          <span>Cheer Clinic</span>
+        </label>
+
+        <!-- Page 4 -->
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Alumni Association">
+          <span>Chickasaw Alumni Association</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Annual Meeting & Festival">
+          <span>Chickasaw Annual Meeting & Festival</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Archaeological Survey Program (CASPR)">
+          <span>Chickasaw Archaeological Survey Program (CASPR)</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Arts Academy">
+          <span>Chickasaw Arts Academy</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Business Directory">
+          <span>Chickasaw Business Directory</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Capitol Building">
+          <span>Chickasaw Capitol Building</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Children's Village">
+          <span>Chickasaw Children's Village</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Community Outreach Program">
+          <span>Chickasaw Community Outreach Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Council House Museum">
+          <span>Chickasaw Council House Museum</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Cultural Enrichment Family Camp">
+          <span>Chickasaw Cultural Enrichment Family Camp</span>
+        </label>
+
+        <!-- Page 5 -->
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chipota Chikashshanompoli (Children Speaking Chickasaw Language) Club">
+          <span>Chipota Chikashshanompoli (Children Speaking Chickasaw Language) Club</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Diabetes Care Center">
+          <span>Diabetes Care Center</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Elder Employment Program">
+          <span>Chickasaw Elder Employment Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Elders Conference">
+          <span>Chickasaw Elders Conference</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Elders Homeland Tour">
+          <span>Chickasaw Elders Homeland Tour</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Explorers Program">
+          <span>Chickasaw Explorers Program</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Historical Society">
+          <span>Chickasaw Historical Society</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Honor Club">
+          <span>Chickasaw Honor Club</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Honor Guard">
+          <span>Chickasaw Honor Guard</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Humanities Courses">
+          <span>Chickasaw Humanities Courses</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Landscaping Products – Chickasaw Farms">
+          <span>Chickasaw Landscaping Products – Chickasaw Farms</span>
+        </label>
+        <label class="service-card">
+          <input type="checkbox" name="services" value="Chickasaw Language Flashcards">
+          <span>Chickasaw Language Flashcards</span>
+        </label>
+      </div>
+
+      <button type="submit" id="submitBtn" disabled>Submit</button>
+    </form>
+  </main>
+
+  <script>
+    const phoneInput = document.getElementById('phone');
+    const submitBtn = document.getElementById('submitBtn');
+
+   phoneInput.addEventListener('input', () => {
+  submitBtn.disabled = phoneInput.value.trim() === '';
+});
+  </script>
+</body>
+</html>
