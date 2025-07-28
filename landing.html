@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chickasaw ECS Portal</title>
+  <style>
+    :root {
+      --primary-blue: #005a9c;
+      --light-gray: #f5f5f5;
+      --card-bg: #ffffff;
+      --text-color: #333333;
+      --font-sans: "Segoe UI", Roboto, sans-serif;
+    }
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: var(--font-sans);
+      background: var(--light-gray);
+      color: var(--text-color);
+      line-height: 1.5;
+    }
+    header {
+      background: var(--primary-blue);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    header h1 {
+      font-size: 2rem;
+      font-weight: normal;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 1rem;
+    }
+    .link-card {
+      background: var(--card-bg);
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 1.5rem;
+      text-align: center;
+      transition: box-shadow 0.2s;
+    }
+    .link-card:hover {
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .link-card a {
+      color: var(--primary-blue);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: bold;
+    }
+    .link-card a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      text-align: center;
+      margin: 2rem 0;
+      font-size: 0.9rem;
+      color: #555;
+      line-height: 1.4;
+    }
+    .footer a {
+      color: var(--primary-blue);
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Chickasaw ECS Portal</h1>
+    <p>Quick links to all Enhanced Citizen Services pages</p>
+  </header>
+
+  <main>
+    <div class="links-grid">
+      <div class="link-card">
+        <a href="https://joecallahan05.github.io/ChickasawECS/main.html" target="_blank">
+          ECS Opt‑In Form
+        </a>
+      </div>
+      <div class="link-card">
+        <a href="https://joecallahan05.github.io/ChickasawECS/ThankYouOpt-in.html" target="_blank">
+          Thank You (Opt‑In)
+        </a>
+      </div>
+      <div class="link-card">
+        <a href="https://joecallahan05.github.io/ChickasawECS/Opt-out.html" target="_blank">
+          Opt‑Out Form
+        </a>
+      </div>
+      <div class="link-card">
+        <a href="https://joecallahan05.github.io/ChickasawECS/ThankYouOpt-out.html" target="_blank">
+          Thank You (Opt‑Out)
+        </a>
+      </div>
+      <div class="link-card">
+        <a href="https://joecallahan05.github.io/ChickasawECS/PrivacyPolicy.html" target="_blank">
+          Privacy Policy
+        </a>
+      </div>
+      <div class="link-card">
+        <a href="https://joecallahan05.github.io/ChickasawECS/CTAFlow.html" target="_blank">
+          Message Flow &amp; CTA
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <div class="footer">
+    <p>
+      <a href="https://www.chickasaw.net" target="_blank">the Chickasaw Nation Tribal Government</a><br>
+      520 E. Arlington, Ada OK 74820
+    </p>
+  </div>
+
+</body>
+</html>
